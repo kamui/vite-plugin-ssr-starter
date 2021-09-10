@@ -1,0 +1,76 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:import/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "arrowParens": "always",
+        "semi": false,
+        "tabWidth": 2,
+        "trailingComma": "es5"
+      }
+    ],
+    "curly": [
+      "error",
+      "all"
+    ],
+    "quotes": [
+      "error",
+      "double",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": false
+      }
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
+    "brace-style": [
+      "error",
+      "1tbs",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "no-console": "warn",
+    "react/react-in-jsx-scope": "warn",
+    "react/no-array-index-key": "warn",
+    "react/forbid-prop-types": "warn",
+    "react/jsx-boolean-value": "error",
+    "react/jsx-no-bind": [
+      "warn",
+      {
+        "allowArrowFunctions": true
+      }
+    ],
+    "react/jsx-tag-spacing": "error",
+    "react/static-property-placement": "error",
+    "@typescript-eslint/naming-convention": "warn",
+    "@typescript-eslint/type-annotation-spacing": "error"
+  },
+  "root": true,
+  "env": {
+    "es2020": true,
+    "browser": true,
+    "jest": true,
+    "node": true
+  },
+  "globals": {
+    "process": true
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "import",
+    "react",
+    "jsx-a11y"
+  ]
+}
