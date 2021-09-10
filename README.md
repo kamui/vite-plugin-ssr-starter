@@ -16,6 +16,9 @@ A [changelog](./CHANGELOG.md) is available to track updates.
 - Jest for Unit tests
 - Playwright for E2E tests
 - Storybook - UI component tool
+- GitHub Dependabot
+- Automated Unit and E2E tests
+  - Github Actions
 
 ## Usage
 
