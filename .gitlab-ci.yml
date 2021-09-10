@@ -14,11 +14,10 @@ cache:
 
 test:
   stage: test
+  image: mcr.microsoft.com/playwright:focal
   script:
     - cd -- "$CI_PROJECT_DIR"
     - npm ci
-    - npx playwright install-deps
-    - npx playwright install
     - npm run test:unit
     - npm run prod &
     - sleep 10 && curl http://localhost:3000
