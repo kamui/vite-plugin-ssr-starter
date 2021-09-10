@@ -30,8 +30,6 @@ jobs:
 
       ## Dependencies
       - name: Install npm Dependencies
-        if: |
-          steps.npm-cache.outputs.cache-hit != 'true'
         run: npm ci
 
       - name: Install Playwright Dependencies
