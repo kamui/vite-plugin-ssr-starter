@@ -1,7 +1,7 @@
-import React from "react";
-import classes from "./index.module.css";
+import React from "react"
+import classes from "./index.module.css"
 
-export { Page };
+export { Page }
 
 function Page() {
   return (
@@ -9,5 +9,5 @@ function Page() {
       <h1>About</h1>
       <p className={classes.content}>A colored page.</p>
     </>
-  );
+  )
 }

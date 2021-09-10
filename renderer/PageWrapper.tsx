@@ -1,18 +1,18 @@
-import React from "react";
-import logo from "./logo.svg";
-import { PageContextProvider } from "./usePageContext";
-import type { PageContext } from "./types";
-import "./PageWrapper.css";
-import { Link } from "./Link";
+import React from "react"
+import logo from "./logo.svg"
+import { PageContextProvider } from "./usePageContext"
+import type { PageContext } from "./types"
+import "./PageWrapper.css"
+import { Link } from "./Link"
 
-export { PageWrapper };
+export { PageWrapper }
 
 function PageWrapper({
   children,
   pageContext,
 }: {
-  children: React.ReactNode;
-  pageContext: PageContext;
+  children: React.ReactNode
+  pageContext: PageContext
 }) {
   return (
     <React.StrictMode>
@@ -31,7 +31,7 @@ function PageWrapper({
         </Layout>
       </PageContextProvider>
     </React.StrictMode>
-  );
+  )
 }
 
 function Layout({ children }: { children: React.ReactNode }) {
@@ -45,7 +45,7 @@ function Layout({ children }: { children: React.ReactNode }) {
     >
       {children}
     </div>
-  );
+  )
 }
 
 function Sidebar({ children }: { children: React.ReactNode }) {
@@ -62,7 +62,7 @@ function Sidebar({ children }: { children: React.ReactNode }) {
     >
       {children}
     </div>
-  );
+  )
 }
 
 function Content({ children }: { children: React.ReactNode }) {
@@ -77,7 +77,7 @@ function Content({ children }: { children: React.ReactNode }) {
     >
       {children}
     </div>
-  );
+  )
 }
 
 function Logo() {
@@ -92,5 +92,5 @@ function Logo() {
         <img src={logo} height={64} width={64} alt="logo" />
       </a>
     </div>
-  );
+  )
 }
