@@ -19,6 +19,7 @@ A [changelog](./CHANGELOG.md) is available to track updates.
 - GitHub Dependabot
 - Automated Unit and E2E tests
   - Github Actions
+  - Gitlab CI
 
 ## Usage
 

@@ -1,0 +1,26 @@
+image: node:14
+
+stages:
+  - test
+
+variables:
+  npm_config_cache: '$CI_PROJECT_DIR/.npm'
+
+cache:
+  paths:
+    - /root/.cache/
+    - $CI_PROJECT_DIR/node_modules/
+  key: ${CI_COMMIT_REF_SLUG}
+
+test:
+  stage: test
+  script:
+    - cd -- "$CI_PROJECT_DIR"
+    - npm ci
+    - npx playwright install-deps
+    - npx playwright install
+    - npm run test:unit
+    - npm run prod &
+    - sleep 10 && curl http://localhost:3000
+    - npm run test:e2e
+  timeout: 15m
