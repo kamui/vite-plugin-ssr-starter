@@ -10,6 +10,7 @@
     "server:prod": "cross-env NODE_ENV=production ts-node ./server",
     "test:unit": "cross-env NODE_ENV=test vite-jest",
     "test:unit:watch": "cross-env NODE_ENV=test vite-jest --watch",
+    "test:e2e": "playwright test",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
+    "@playwright/test": "^1.14.1",
     "@storybook/addon-actions": "^6.3.8",
     "@storybook/addon-essentials": "^6.3.8",
     "@storybook/addon-links": "^6.3.8",
