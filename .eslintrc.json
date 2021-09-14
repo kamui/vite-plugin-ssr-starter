@@ -17,10 +17,7 @@
         "trailingComma": "es5"
       }
     ],
-    "curly": [
-      "error",
-      "all"
-    ],
+    "curly": ["error", "all"],
     "quotes": [
       "error",
       "double",
@@ -29,10 +26,7 @@
         "allowTemplateLiterals": false
       }
     ],
-    "semi": [
-      "error",
-      "never"
-    ],
+    "semi": ["error", "never"],
     "brace-style": [
       "error",
       "1tbs",
@@ -66,11 +60,5 @@
   "globals": {
     "process": true
   },
-  "plugins": [
-    "@typescript-eslint",
-    "prettier",
-    "import",
-    "react",
-    "jsx-a11y"
-  ]
+  "plugins": ["@typescript-eslint", "prettier", "import", "react", "jsx-a11y"]
 }
