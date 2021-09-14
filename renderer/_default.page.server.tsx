@@ -1,7 +1,7 @@
 import ReactDOMServer from "react-dom/server"
 import React from "react"
 import { PageWrapper } from "./PageWrapper"
-import { html } from "vite-plugin-ssr"
+import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr"
 import logoUrl from "./logo.svg"
 import type { PageContext } from "./types"
 import type { PageContextBuiltIn } from "vite-plugin-ssr/types"
@@ -25,7 +25,7 @@ async function render(pageContext: PageContextBuiltIn & PageContext) {
     (documentProps && documentProps.description) ||
     "App using Vite + vite-plugin-ssr"
 
-  return html`<!DOCTYPE html>
+  const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
@@ -35,7 +35,14 @@ async function render(pageContext: PageContextBuiltIn & PageContext) {
         <title>${title}</title>
       </head>
       <body>
-        <div id="page-view">${html.dangerouslySkipEscape(pageHtml)}</div>
+        <div id="page-view">${dangerouslySkipEscape(pageHtml)}</div>
       </body>
     </html>`
+
+  return {
+    documentHtml,
+    pageContext: {
+      // We can add some `pageContext` here, which is useful if we want to do page redirection https://vite-plugin-ssr.com/page-redirection
+    },
+  }
 }
