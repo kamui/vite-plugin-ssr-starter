@@ -20,6 +20,6 @@ test:
     - npm ci
     - npm run test:unit
     - npm run prod &
-    - sleep 10 && curl http://localhost:3000
+    - sleep 15 && curl http://localhost:3000
     - npm run test:e2e
   timeout: 15m
