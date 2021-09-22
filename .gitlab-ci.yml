@@ -21,5 +21,6 @@ test:
     - npm run test:unit
     - npm run prod &
     - sleep 15 && curl http://localhost:3000
+    - npx playwright install
     - npm run test:e2e
   timeout: 15m
