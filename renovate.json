@@ -1,5 +1,4 @@
 {
   "extends": ["config:base"],
-  "rangeStrategy": "replace",
-  "schedule": ["before 7am"]
+  "schedule": ["after 5pm", "every weekend"]
 }
