@@ -1,7 +1,5 @@
 {
   "extends": ["config:base"],
-  "preserveSemverRanges": {
-    "rangeStrategy": "replace"
-  },
+  "rangeStrategy": "replace",
   "schedule": ["after 5pm", "every weekend"]
 }
