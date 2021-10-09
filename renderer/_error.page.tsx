@@ -1,8 +1,6 @@
 import React from "react"
 
-export { Page }
-
-function Page({ is404 }: { is404: boolean }) {
+const Page: React.FC<{ is404: boolean }> = ({ is404 }) => {
   if (is404) {
     return (
       <>
@@ -19,3 +17,5 @@ function Page({ is404 }: { is404: boolean }) {
     )
   }
 }
+
+export default Page

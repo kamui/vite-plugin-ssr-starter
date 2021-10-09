@@ -1,9 +1,7 @@
 import React from "react"
 import classes from "./index.module.css"
 
-export { Page }
-
-function Page() {
+const Page: React.FC = () => {
   return (
     <>
       <h1>About</h1>
@@ -11,3 +9,5 @@ function Page() {
     </>
   )
 }
+
+export default Page

@@ -1,6 +1,6 @@
 import ReactDOMServer from "react-dom/server"
 import React from "react"
-import { PageWrapper } from "./PageWrapper"
+import PageWrapper from "./PageWrapper"
 import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr"
 import logoUrl from "./logo.svg"
 import type { PageContext } from "./types"
@@ -21,9 +21,7 @@ async function render(pageContext: PageContextBuiltIn & PageContext) {
   // See https://vite-plugin-ssr.com/html-head
   const { documentProps } = pageContext
   const title = (documentProps && documentProps.title) || "Vite SSR app"
-  const desc =
-    (documentProps && documentProps.description) ||
-    "App using Vite + vite-plugin-ssr"
+  const desc = (documentProps && documentProps.description) || "App using Vite + vite-plugin-ssr"
 
   const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang="en">

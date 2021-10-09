@@ -1,9 +1,7 @@
 import React from "react"
-import { Counter } from "@/components/Counter"
+import Counter from "@/components/Counter"
 
-export { Page }
-
-function Page() {
+const Page: React.FC = () => {
   return (
     <>
       <h1>Welcome</h1>
@@ -17,3 +15,5 @@ function Page() {
     </>
   )
 }
+
+export default Page

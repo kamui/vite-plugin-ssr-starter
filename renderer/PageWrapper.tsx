@@ -3,17 +3,9 @@ import logo from "./logo.svg"
 import { PageContextProvider } from "./usePageContext"
 import type { PageContext } from "./types"
 import "./PageWrapper.css"
-import { Link } from "./Link"
+import Link from "./Link"
 
-export { PageWrapper }
-
-function PageWrapper({
-  children,
-  pageContext,
-}: {
-  children: React.ReactNode
-  pageContext: PageContext
-}) {
+const PageWrapper: React.FC<{ children: React.ReactNode; pageContext: PageContext }> = ({ children, pageContext }) => {
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
@@ -34,7 +26,7 @@ function PageWrapper({
   )
 }
 
-function Layout({ children }: { children: React.ReactNode }) {
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div
       style={{
@@ -48,7 +40,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   )
 }
 
-function Sidebar({ children }: { children: React.ReactNode }) {
+const Sidebar: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div
       style={{
@@ -65,7 +57,7 @@ function Sidebar({ children }: { children: React.ReactNode }) {
   )
 }
 
-function Content({ children }: { children: React.ReactNode }) {
+const Content: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div
       style={{
@@ -80,7 +72,7 @@ function Content({ children }: { children: React.ReactNode }) {
   )
 }
 
-function Logo() {
+const Logo: React.FC = () => {
   return (
     <div
       style={{
@@ -94,3 +86,5 @@ function Logo() {
     </div>
   )
 }
+
+export default PageWrapper
