@@ -5,6 +5,8 @@
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:react/recommended",
     "plugin:jsx-a11y/recommended"
   ],
   "rules": {
@@ -12,6 +14,7 @@
       "error",
       {
         "arrowParens": "always",
+        "printWidth": 120,
         "semi": false,
         "tabWidth": 2,
         "trailingComma": "es5"
@@ -34,6 +37,12 @@
         "allowSingleLine": true
       }
     ],
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ["^@/.+"]
+      }
+    ],
     "no-console": "warn",
     "react/react-in-jsx-scope": "warn",
     "react/no-array-index-key": "warn",
@@ -47,7 +56,30 @@
     ],
     "react/jsx-tag-spacing": "error",
     "react/static-property-placement": "error",
-    "@typescript-eslint/naming-convention": "warn",
+    "@typescript-eslint/naming-convention": [
+      "warn",
+      {
+        "selector": "default",
+        "format": ["camelCase"],
+        "leadingUnderscore": "allow",
+        "trailingUnderscore": "allow"
+      },
+
+      {
+        "selector": "variable",
+        "format": ["camelCase", "UPPER_CASE", "PascalCase"],
+        "leadingUnderscore": "allow",
+        "trailingUnderscore": "allow"
+      },
+      {
+        "format": ["camelCase", "PascalCase"],
+        "selector": "property"
+      },
+      {
+        "selector": ["enumMember", "typeLike"],
+        "format": ["PascalCase"]
+      }
+    ],
     "@typescript-eslint/type-annotation-spacing": "error"
   },
   "root": true,
