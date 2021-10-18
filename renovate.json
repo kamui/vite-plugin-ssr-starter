@@ -1,5 +1,6 @@
 {
   "extends": ["config:base", ":preserveSemverRanges"],
+  "baseBranches": ["master", "main"],
   "separateMinorPatch": true,
   "timezone": "America/New_York"
 }
