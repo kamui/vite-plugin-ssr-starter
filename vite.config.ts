@@ -4,17 +4,11 @@ import { UserConfig } from "vite"
 import path from "path"
 
 const config: UserConfig = {
-  plugins: [
-    ...(process.env.NODE_ENV !== "test" ? [reactRefresh()] : []),
-    ssr(),
-  ],
+  plugins: [...(process.env.NODE_ENV !== "test" ? [reactRefresh()] : []), ssr()],
   resolve: {
-    alias: [
-      {
-        find: "@",
-        replacement: path.resolve(__dirname, "."),
-      },
-    ],
+    alias: {
+      "#app": path.resolve(__dirname, "."),
+    },
   },
 }
 

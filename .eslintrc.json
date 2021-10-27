@@ -40,7 +40,7 @@
     "import/no-unresolved": [
       "error",
       {
-        "ignore": ["^@/.+"]
+        "ignore": ["^#app/.+"]
       }
     ],
     "no-console": "warn",

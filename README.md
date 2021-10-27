@@ -12,7 +12,7 @@ A [changelog](./CHANGELOG.md) is available to track updates.
 - PostCSS 8
 - Eslint
 - Prettier
-- Alias `@` to `<project_root>`
+- Alias `#app` to `<project_root>`
 - Jest for Unit tests
 - Playwright for E2E tests
 - Storybook - UI component tool
