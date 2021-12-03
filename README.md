@@ -7,7 +7,7 @@ A [changelog](./CHANGELOG.md) is available to track updates.
 ## Features
 
 - React
-- TypeScript 4.4
+- TypeScript 4.5
 - CSS Modules
 - PostCSS 8
 - Eslint
