@@ -30,20 +30,20 @@
     "ts-node": "^10.4.0",
     "typescript": "^4.5.3",
     "vite": "^2.6.14",
-    "vite-plugin-ssr": "^0.3.35"
+    "vite-plugin-ssr": "^0.3.36"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@playwright/test": "1.17.1",
     "@storybook/addon-actions": "^6.4.7",
     "@storybook/addon-essentials": "^6.4.9",
-    "@storybook/addon-links": "^6.4.8",
+    "@storybook/addon-links": "^6.4.9",
     "@storybook/react": "^6.4.7",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.0.3",
-    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.6.0",
     "babel-loader": "^8.2.3",
     "eslint": "^8.4.1",
@@ -53,7 +53,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.27.1",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^27.4.3",
+    "jest": "^27.4.5",
     "jest-environment-jsdom": "^27.4.0",
     "prettier": "2.5.1",
     "vite-jest": "^0.1.4"
