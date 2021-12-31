@@ -33,7 +33,7 @@
     "vite-plugin-ssr": "^0.3.42"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.5",
+    "@babel/core": "^7.16.7",
     "@playwright/test": "1.17.1",
     "@storybook/addon-actions": "^6.4.7",
     "@storybook/addon-essentials": "^6.4.9",
